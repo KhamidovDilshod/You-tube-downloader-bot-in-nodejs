@@ -11,8 +11,10 @@
   "author": "Dilshodbek Hamidov",
   "license": "ISC",
   "dependencies": {
+    "instagram-downloader": "^0.0.0",
     "node-telegram-bot-api": "^0.57.0",
-    "ytdl-core": "^4.11.0"
+    "ytdl-core": "^4.11.0",
+    "axios": "^0.27.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.16"
