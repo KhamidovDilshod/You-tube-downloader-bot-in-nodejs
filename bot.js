@@ -67,13 +67,12 @@ bot.on('message', async (message) => {
 
                 await botSendVideo();
             }
+        } else if (!youtube.validateURL(message.text)) {
+            await bot.sendMessage(
+                chatId,
+                'Неверный URL-адрес видео, проверьте URL-адрес YouTube!!'
+            )
         }
-            // else if (!youtube.validateURL(message.text)) {
-            //     await bot.sendMessage(
-            //         chatId,
-            //         'Неверный URL-адрес видео, проверьте URL-адрес YouTube!!'
-            //     )
-        // }
         else if (message.text.startsWith('https://www.instagram.com')) {
             Instagram('https://www.instagram.com/p/B4CR8RoHCn6/?igshid=o1mtap82mf30')
                 .then(data => {
